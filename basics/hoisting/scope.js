@@ -5,14 +5,16 @@ var d = 5;
 
 // FUNCTION SCOPE
 function demo() {
-    // function scope 
+  // function scope
 }
+
+
 
 //BLOCK SCOPE
 {
   let a = 5;
   const b = 6;
-  var c = 7; //Its not a block scope
+  var c = 7; //Its not in a block scope
 }
 // ************************************************************
 // VARIABLE SHADOWING
@@ -70,6 +72,16 @@ function test5() {
   }
 }
 test5();
+
+// E 6
+function demo66() {
+  const deom33 = "rohan";
+  if (true) {
+    const demo33 = "raghav";
+    console.log("demo36", demo33);
+  }
+}
+demo66();
 // ****************************************************************
 
 // REDECLARATION
@@ -115,5 +127,5 @@ q = 7;
 // E 3
 // We cannot re-initalize const
 const r = 2;
-r = 4; //will not work
+// r = 4; //will not work
 console.log("r", r);

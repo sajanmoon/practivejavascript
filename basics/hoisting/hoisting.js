@@ -21,5 +21,11 @@ function demo() {
 }
 demo();
 
+console.log(demo1);
+
+var demo1 = () => {
+  return console.log("hello");
+};
+
 // TEMORAL DEAD ZONE
 // where variable are in the scope but not yet declare

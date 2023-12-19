@@ -54,7 +54,7 @@ function add3(fn) {
   console.log(addition(3, 5));
 }
 add3(addition);
-
+// ************************************************************
 // Q 4 What is IIEF - Imeddiately invoked expression function
 // E 1
 (function multiply(num) {
@@ -178,7 +178,7 @@ var test2 = function () {
   let z = 200;
 };
 test2();
-
+// ***********************************************************
 // PARAMS VS ARGUMENTS
 // E 1
 function test34(num) {
@@ -194,11 +194,11 @@ function test99(num1, num2) {
   console.log(num1 * num2);
 }
 test99(23, 34); //Arguments
-
+// ***************************************************************
 // Spread vs Rest Operators
 // SPREAD OPERATORS
 // E 1
-function test56(num1, num2) {
+function test56(...num) {
   console.log("spread:", num1 * num2);
 }
 var xyz = [3, 4];
@@ -272,13 +272,12 @@ setTimeout(() => {
 }, 0);
 console.log("3");
 
-
-
-// ARROW FUNCTION 
-// E 1 
+// ARROW FUNCTION
+// E 1
 const add = (firstName, secondName) => {
   return firstName + secondName;
 };
 
-// E 2 
-const sub = (num1,num2) => num1+num2 //we can get rid of curly brases and return keyword when passing a single line
+// E 2
+const sub = (num1, num2) => num1 + num2; //we can get rid of curly brases and return keyword when passing a single line
+

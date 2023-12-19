@@ -71,6 +71,7 @@ const calculate5 = function (radius4, logic) {
   return output9;
 };
 console.log(calculate5(radius4, area));
+// ******************************************************************
 // E 6
 function calculate55(operation, a, b) {
   return operation(a, b);
@@ -145,6 +146,15 @@ function subt(a, b) {
 const total1 = 23;
 
 function totalcal(x) {
-  return total1 + x
+  return total1 + x;
 }
 console.log(totalcal(5));
+// *******************************************************
+function calculate(operation, a, b) {
+  return operation(a, b);
+}
+function add(a,b) {
+  return a+b
+  
+}
+console.log(calculate(add));

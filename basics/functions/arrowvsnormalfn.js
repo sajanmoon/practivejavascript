@@ -103,4 +103,13 @@ user99.welcome();
 user99.username99 = "rohan";
 user99.welcome();
 
-// HIGHER ORDER FUNCTION 
+let arrownormal = {
+  username1: "rohans",
+  sm1() {
+    console.log(this.username);
+  },
+  sm2: () => {
+    console.log(this.usename);
+  },
+};
+arrownormal.sm1();
