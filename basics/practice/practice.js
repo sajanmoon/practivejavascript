@@ -1,5 +1,6 @@
+const arrReducrs = [5, 4, 6, 7, 3];
 
-
-const test = [1,2,3,4,5]
-
-console.log(...test);
+const myTotal = arrReducrs.filter(function (acc, curr) {
+  return acc + curr;
+}, 0);
+console.log("myTotal:", myTotal);
