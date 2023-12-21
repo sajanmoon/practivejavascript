@@ -61,9 +61,19 @@ console.log("AfterSlice-Range(1,3)", myn1);
 const myn2 = myArr.splice(1, 3);
 console.log(myn2);
 console.log("OrignalArrayAfterSplice", myArr);
+// ***********************************************************
+// 11 FOREACH
+// for each is a higher order function which is used to iterating over the element in an array ans applying callback function to each element.
+const arrFrEch = ["rohan", "sahil", "aditya", "nikhil"];
+arrFrEch.forEach(function (item, index) {
+  // console.log(item, index);
+  return item, index;
+});
+console.log("arrFrEch:", arrFrEch);
 // *************************************************************
 // HIGHER ORDER FUNCTION
 // 10 MAP
+// Map method used to create new array using existing array by applying function to each one of element 
 
 const arr = [2, 3, 4, 5, 6];
 // E 1
@@ -100,15 +110,7 @@ console.log("mapInside", mapInside);
 const ArrFunc = arr.map((x) => x * 3);
 console.log("ArrFunc", ArrFunc);
 
-// ***********************************************************
-// 11 FOREACH
-// for each is a higher order function which is used to iterating over the element in an array ans applying callback function to each element.
-const arrFrEch = ["rohan", "sahil", "aditya", "nikhil"];
-arrFrEch.forEach(function (item, index) {
-  // console.log(item, index);
-  return item, index;
-});
-console.log("arrFrEch:", arrFrEch);
+// *************************************************************
 // 11 FILTER
 // E 1
 const arrFiltr = [2, 3, 4, 5, 6, 7, 8, 9];
@@ -146,10 +148,10 @@ const books = [
 const getBooks = books.filter((bk) => bk.genre === "History");
 
 console.log("Books", getBooks);
-
+// **********************************************************
 // 12 REDUCE
 // It is used for reducing the elements of an array to single value based on a provided callback function
-// the refuce function take accumalator and current value of an array during each iteration and it return a single accumlated result
+// the reduce function take accumalator and current value of an array during each iteration and it return a single accumlated result
 // Accumlator - initial value
 
 const arrReducrs = [5, 4, 6, 7, 3];
