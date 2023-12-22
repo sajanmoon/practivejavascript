@@ -1,6 +1,12 @@
-const arrReducrs = [5, 4, 6, 7, 3];
+Array.prototype.myReduce = function (cb, accumalator) {
+  for (let i = 0; i < this.length; i++) {
+    accumalator = accumalator ? cb(accumalator, this[i], i, this) : this[i];
+  }
+  return accumalator;
+};
+const arrReduce = [5, 10, 15, 20];
 
-const myTotal = arrReducrs.filter(function (acc, curr) {
+const sum3 = arrReduce.myReduce((acc, curr) => {
   return acc + curr;
-}, 0);
-console.log("myTotal:", myTotal);
+}, 5);
+console.log("pollyfillforReduce3", sum3);
