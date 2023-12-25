@@ -6,7 +6,7 @@ const user = {
 
 user.name = "piyush"; //to modify the value
 
-delete user.age; //to delter value
+delete user.age; //to delete value
 
 console.log(user); //to access a property
 // *********************************************************
@@ -21,7 +21,7 @@ console.log(func);
 const user1 = {
   name: "sajan",
   age: 24,
-  "my name is": "rahul", //to access this kind of propert we have a different syntax
+  "my name is": "rahul", //to access this kind of property we have a different syntax
 };
 console.log(user1["my name is"]);
 // ************************************************************
@@ -139,8 +139,8 @@ const c = { key: "c" };
 a[b] = 123;
 a[c] = 426;
 
-// console.log(a[b]);
-console.log(a);
+console.log(a[b]);
+// console.log(a);
 
 // ***********************************************************
 // Q 9

@@ -1,5 +1,5 @@
 // What are Array
-// Array is a data structure which is used to store and organise value.
+// Array is a data type which is used to store and organise value.
 // It it define using square brackets []
 // It can contain different type of data type such as number ,string,objects,even array
 // Javascript arrays are resizable and can contain mix of different data types
@@ -22,11 +22,13 @@ console.log(myArr[0]);
 // Push method is used to add the new value in array(adds the end)
 myArr.push(7);
 console.log("PUSH", myArr);
+
 // *************************************************************
 // 2 POP
 //Pop method used to remove the last value from the array
 myArr.pop();
 console.log("POP", myArr);
+
 // *************************************************************
 // 3 UNSHIFT
 // unshift add specified value in a beginning of an array and return new length
@@ -56,7 +58,7 @@ console.log(typeof newArr);
 // *************************************************************
 console.log("slice");
 // 8 SLICE
-// It will slice the arrays from given range where it include a first range and exclude last range
+// It will slice the arrays from given range where it include a first range and exclude last range and return the part within the given range
 console.log("OrignalArray", myArr);
 const myn1 = myArr.slice(1, 3);
 console.log("AfterSlice-Range(1,3)", myn1);
@@ -67,7 +69,7 @@ const myn2 = myArr.splice(1, 3);
 console.log(myn2);
 console.log("OrignalArrayAfterSplice", myArr);
 // ***********************************************************
-// 11 FOREACH
+// 10 FOREACH
 // for each is a higher order function which is used to iterating over the element in an array ans applying callback function to each element.
 const arrFrEch = ["rohan", "sahil", "aditya", "nikhil"];
 arrFrEch.forEach(function (item, index) {
@@ -77,7 +79,7 @@ arrFrEch.forEach(function (item, index) {
 console.log("arrFrEch:", arrFrEch);
 // *************************************************************
 // HIGHER ORDER FUNCTION
-// 10 MAP
+// 11 MAP
 // Map method used to create new array using existing array by applying function to each one of element
 
 const arr = [2, 3, 4, 5, 6];

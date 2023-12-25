@@ -1,8 +1,6 @@
 // Objects:A object in javascript is data type which allow us to store and organise data using a collective key-value pair
 
-// Object literals
-
-const mySymb = Symbol("key1");
+const mySymb = "key1";
 
 const Jsuser = {
   name: "sajan",
@@ -12,6 +10,7 @@ const Jsuser = {
   email: "sajanmoon5@gmail.com",
   location: "nagpur",
 };
+
 // to access a data in object
 console.log(Jsuser.name);
 // Another way to access a object

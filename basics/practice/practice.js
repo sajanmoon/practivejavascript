@@ -1,12 +1,21 @@
-Array.prototype.myReduce = function (cb, accumalator) {
-  for (let i = 0; i < this.length; i++) {
-    accumalator = accumalator ? cb(accumalator, this[i], i, this) : this[i];
-  }
-  return accumalator;
+// Destructure Objects
+const course = {
+  name: "sajan",
+  email: "sajanmoon5@dmail.com",
+  place: "mumbai",
+  fullName: {
+    firstName: "sajan",
+    lastName: "moon",
+  },
 };
-const arrReduce = [5, 10, 15, 20];
 
-const sum3 = arrReduce.myReduce((acc, curr) => {
-  return acc + curr;
-}, 5);
-console.log("pollyfillforReduce3", sum3);
+const {
+  name,
+  email: mail,
+  place,
+  fullName: { firstName },
+} = course;
+console.log(name);
+console.log(mail);
+console.log(place);
+console.log(firstName);

@@ -32,7 +32,7 @@ console.log(sum);
 // ***********************************************************
 // Q 4 Pollyfills
 // Pollyfills are piece of code that provides modern functionality to older browser which cannot understand those features
-// Pollyfill for map()
+// Q Pollyfill for map()
 // arr.map((num, i, arr) => {});
 
 Array.prototype.myMap = function (cb) {

@@ -8,7 +8,8 @@ const dc_heros = ["superman", "batman", "flash"];
 // CONCAT
 // Merge and Return a new array
 const allHeroes = marvel_heros.concat(dc_heros);
-console.log(allHeroes);
+console.log(allHeroes); 
+
 
 // SPREAD OPERATOR - MOSTLY USED
 const allNewHeros = [...marvel_heros, ...dc_heros];
@@ -19,6 +20,6 @@ const newArray = [1, 2, 3, [4, 5], 7, [6, 5, 4, [3, 5, 7]]];
 const newArray1 = newArray.flat(Infinity);
 console.log(newArray1);
 
-// FROM- Convert strings to array 
+// FROM- Convert strings to array
 console.log(Array.from("sajan"));
-console.log(Array.from({name:"sajan"})); //Returns Empty array
+console.log(Array.from({ name: "sajan" })); //Returns Empty array
