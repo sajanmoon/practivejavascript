@@ -123,25 +123,58 @@ console.log("*****************************************");
 // Q 8 - What will be the output
 // E 1
 
-const user8 = {
-  name: "Rohan Das",
-  logMessege() {
-    console.log("setTimeOut-", this.name);
+// const user8 = {
+//   name: "Rohan Das",
+//   logMessege() {
+//     console.log("setTimeOut-", this.name);
+//   },
+// };
+
+// setTimeout(function () {
+//   user8.logMessege();
+// }, 1000);
+
+// // E 2
+
+// const user81 = {
+//   name: "das Rohan",
+//   logMessege1() {
+//     console.log("setTimeOut2", this.name);
+//   },
+// };
+// setTimeout(function () {
+//   user81.logMessege1();
+// }, 1000);
+
+console.log("*****************************************");
+// Q 9
+// What is the output
+
+const user9 = {
+  name: "Piyush",
+  hello() {
+    return `Hello  ${this.name}`;
+  },
+  history: () => {
+    return `Hello  ${this.name}`;
   },
 };
+console.log(user9.hello());
+console.log(user9.history());
 
-setTimeout(function () {
-  user8.logMessege();
-}, 1000);
+console.log("*****************************************");
+// Q 10 - Create Multiple Value
 
-// E 2
+var length = 4;
+function callback() {
+  console.log(this.length);
+}
 
-const user81 = {
-  name: "das Rohan",
-  logMessege1() {
-    console.log("setTimeOut2", this.name);
+const obj = {
+  length: 5,
+  method(fn) {
+    fn();
   },
 };
-setTimeout(function () {
-  user81.logMessege1();
-}, 1000);
+obj.method(callback);
+
