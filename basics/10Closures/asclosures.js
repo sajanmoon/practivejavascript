@@ -68,3 +68,16 @@ function x1() {
   console.log("Namaste Javascript");
 }
 x1();
+
+console.log("**********************************");
+
+function x2() {
+  for (let i = 0; i < 5; i++) {
+    function close(x) {
+      setTimeout(() => {
+        console.log(x);
+      }, x * 1000);
+    }
+    close(i);
+  }
+}
