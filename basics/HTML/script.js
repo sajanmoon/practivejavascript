@@ -1,8 +1,6 @@
-
-var obj3 = { name: "rahul" };
-
-function sayHello3(age3) {
-  return `Hello ${this.name} ${age3}`;
+function exampleFunction() {
+  var localVar = "I am a local variable";
+  console.log(localVar); // Accessible here
 }
-const obj31 = sayHello3.bind(obj3);
-console.log(obj31);
+// console.log(localVar); // Error! localVar is not defined here
+exampleFunction();

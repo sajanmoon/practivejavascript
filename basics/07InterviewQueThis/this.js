@@ -5,6 +5,7 @@
 
 this.a = 5;
 console.log("this.a", this.a);
+
 console.log("*****************************************");
 
 // Normal Function
@@ -13,6 +14,7 @@ function getData() {
   console.log("this.s", this.s);
 }
 getData();
+
 console.log("*****************************************");
 
 // Arrow Function
@@ -21,11 +23,12 @@ const getData1 = () => {
   console.log("this.z", this.z);
 };
 getData1();
+
 console.log("*****************************************");
 
 // Behaviour of "this" inside of an object
 // E 1
-// NORMAL FUNCTION - in case of normal function this is pointing to its parent
+// NORMAL FUNCTION -
 let user = {
   name: "sajan",
   age: 24,
@@ -35,6 +38,7 @@ let user = {
   },
 };
 user.getDetails();
+
 console.log("*****************************************");
 
 // E 2
@@ -52,6 +56,7 @@ let user2 = {
   },
 };
 user2.objectInside.getDetails();
+
 console.log("*****************************************");
 
 // E 3
@@ -64,6 +69,7 @@ let user3 = {
   },
 };
 user3.getDetails();
+
 console.log("*****************************************");
 
 // Q 5 - What will be the output
@@ -123,16 +129,16 @@ console.log("*****************************************");
 // Q 8 - What will be the output
 // E 1
 
-// const user8 = {
-//   name: "Rohan Das",
-//   logMessege() {
-//     console.log("setTimeOut-", this.name);
-//   },
-// };
+const user8 = {
+  name: "Rohan Das",
+  logMessege() {
+    console.log("setTimeOut-", this.name);
+  },
+};
 
-// setTimeout(function () {
-//   user8.logMessege();
-// }, 1000);
+setTimeout(function () {
+  user8.logMessege();
+}, 1000);
 
 // // E 2
 
@@ -177,4 +183,3 @@ const obj = {
   },
 };
 obj.method(callback);
-

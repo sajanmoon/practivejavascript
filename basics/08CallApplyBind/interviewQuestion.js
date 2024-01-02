@@ -108,30 +108,6 @@ setTimeout(() => {
 }, 0);
 console.log("************************************");
 
-// Q 7 what will be the output
-const animal = [
-  {
-    species: "Lion",
-    name: "King",
-  },
-  {
-    species: "Whale",
-    name: "Queen",
-  },
-];
-
-function PrintAnimal(i) {
-  this.print = function () {
-    console.log("#" + i + "" + this.species + ":" + this.name);
-  };
-  this.print();
-}
-
-for (let i = 0; i < animal.length; i++) {
-  PrintAnimal.call(animal[i], i);
-}
-console.log("************************************");
-
 // Q 8 What will be output
 // E 1
 const array = ["a", "b"];

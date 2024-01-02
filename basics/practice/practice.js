@@ -1,21 +1,13 @@
-// Destructure Objects
-const course = {
-  name: "sajan",
-  email: "sajanmoon5@dmail.com",
-  place: "mumbai",
-  fullName: {
-    firstName: "sajan",
-    lastName: "moon",
-  },
+const obj1 = {
+  key: 17,
 };
 
-const {
-  name,
-  email: mail,
-  place,
-  fullName: { firstName },
-} = course;
-console.log(name);
-console.log(mail);
-console.log(place);
-console.log(firstName);
+const obj2 = {
+  key: 19,
+};
+
+function tester() {
+  return this.key + obj2.key;
+}
+
+console.log(tester.call(obj1));
