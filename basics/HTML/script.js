@@ -1,11 +1,11 @@
-function x4() {
-  for (var i = 0; i <= 5; i++) {
-    function close(x) {
-      setTimeout(() => {
-        console.log(x);
-      }, x * 1000);
-    }
-    close(i);
-  }
-}
-x4();
+let obj = {
+  name: "sam",
+  func() {
+    return `Hello ${this.name}`;
+  },
+  func1: () => {
+    return `Hello ${this.name}`;
+  },
+};
+console.log(obj.func());
+console.log(obj.func1());

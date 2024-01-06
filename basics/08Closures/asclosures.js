@@ -9,6 +9,7 @@ function x() {
 let z = x();
 console.log(z);
 z(); //Even after assign the function to some variable we still have access to our variable declare in our closer as it will return a variable a as 10
+
 console.log("**********************************");
 // return a function in different way
 function x() {
@@ -38,15 +39,6 @@ function zz() {
 }
 zz();
 
-// Uses of closure
-// --Module of design pattern
-// --Currying
-// Function like once
-// memoize
-// -Mainting state in async world
-// setTimeout
-// Iterators ...etc
-
 console.log("**********************************");
 
 function xxx() {
@@ -60,7 +52,7 @@ xxx();
 console.log("**********************************");
 
 function x1() {
-  for (let i = 0; i <= 5; i++) {
+  for (var i = 0; i <= 5; i++) {
     setTimeout(() => {
       console.log(i);
     }, 1000);

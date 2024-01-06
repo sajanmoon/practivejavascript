@@ -7,6 +7,7 @@ function outer() {
   inner();
 }
 outer();
+
 // in the above function we can access a variable from a parent function withing child function
 
 function outer1() {

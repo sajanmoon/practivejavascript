@@ -23,26 +23,7 @@ addSix(17);
 
 console.log("***********************************************");
 
-// Q 3 - How would you create a clouser to create a priviate counter
-function counter() {
-  var _counter = 0;
-
-  function add(increment) {
-    _counter += increment;
-  }
-  function retrive() {
-    return "Counter" + _counter;
-  }
-
-  return {
-    add,
-    retrive,
-  };
-}
-
-console.log("***********************************************");
-
-// Q 4
+// Q 3
 function x4() {
   for (var i = 0; i < 4; i++) {
     function close(x) {
