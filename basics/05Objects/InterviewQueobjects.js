@@ -275,10 +275,6 @@ let user20 = {
 
 // To clone a object-way1
 
-const cloneObj = Object.assign({}, user20);
-cloneObj.name = "rahul";
-console.log("deepcopy", user20, cloneObj);
-
 // way2
 const cloneObj1 = JSON.parse(JSON.stringify(user20));
 cloneObj1.name = "qwerty";

@@ -1,11 +1,3 @@
-let obj = {
-  name: "sam",
-  func() {
-    return `Hello ${this.name}`;
-  },
-  func1: () => {
-    return `Hello ${this.name}`;
-  },
-};
-console.log(obj.func());
-console.log(obj.func1());
+const elem = [1, 2, 3, 4, 5, 6, 7, 8];
+
+console.log(Math.max.apply(null, elem));
