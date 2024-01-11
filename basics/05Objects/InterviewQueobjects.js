@@ -284,3 +284,22 @@ console.log(user20, cloneObj1);
 const cloneObj2 = { ...user20 };
 cloneObj2.name = "tyuiop";
 console.log(user20, cloneObj2);
+
+const originalObject = {
+  name: "John",
+  age: 30,
+  address: {
+    city: "New York",
+    country: "USA",
+  },
+};
+
+// For Shallow copy
+// const obj1 = Object.assign({}, originalObject);
+// obj1.address.city = "mumbai";
+// console.log(originalObject.address.city);
+
+// For Deep copy
+const obj2 = JSON.parse(JSON.stringify(originalObject));
+obj2.address.city = "newDelhi";
+console.log(originalObject.address.city);

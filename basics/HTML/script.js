@@ -1,3 +1,9 @@
-const elem = [1, 2, 3, 4, 5, 6, 7, 8];
-
-console.log(Math.max.apply(null, elem));
+Array.prototype.myFilter = function (cbFunc) {
+  let temp = [];
+  for (let i = 0; i < this.length; i++) {
+    if (cbFunc(this[i])) {
+      temp.push(this[i]);
+    }
+  }
+  return temp;
+};

@@ -8,7 +8,7 @@ function outer() {
 }
 outer();
 
-// in the above function we can access a variable from a parent function withing child function
+// in the above function we can access a variable from a parent function within child function
 
 function outer1() {
   let username1 = "sama";
