@@ -80,3 +80,27 @@ let result5 = testClosures(5);
 console.log(result(5));
 console.log(result(5));
 console.log(result(15));
+
+
+//   **********************************************************************************************
+
+// Q 6
+
+function countercode() {
+  let count = 1;
+  function incr() {
+    count++;
+    console.log(count);
+  }
+  function decr() {
+    count--;
+    console.log(count--);
+  }
+  return {
+    incr,
+    decr,
+  };
+}
+let clsurs = countercode();
+clsurs.incr();
+clsurs.decr();
