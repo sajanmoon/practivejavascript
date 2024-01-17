@@ -1,8 +1,27 @@
 // When a function which is passed on to some other function are known as callback function
+// Example 1 - Callback function
+function add(a, b) {
+  return a + b;
+}
 
+function multiply(a, b) {
+  return a * b;
+}
+
+function calculator(operation, a, b) {
+  return operation(a, b);
+}
+
+console.log(calculator(add, 2, 3));
+console.log(calculator(multiply, 2, 3));
+
+// ***************************************************************************************
+// Example 2 - Callback function for asyncronous operation
 setTimeout(() => {
   console.log("timer");
 }, 2000);
+
+
 
 function x(y) {
   //passing a y function in x
