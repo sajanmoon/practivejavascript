@@ -120,6 +120,11 @@ sub.then((res) => {
 
 console.log("end");
 
+// Output
+// start
+// end
+// i resolved
+
 // *****************************************************************************************************
 // Q 4 -chaining the promises
 function likeTheVideo(videoname) {
@@ -349,6 +354,3 @@ Promise.any([
   .catch((err) => {
     console.log(err);
   });
-
-
-  

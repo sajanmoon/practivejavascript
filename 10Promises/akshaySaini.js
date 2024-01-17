@@ -7,6 +7,7 @@ createOrder(cart, function () {
 
 // creating a promises
 const promise = createOrder(cart);
+
 promise.then(function (orderID) {
   proceedToPayment(orderID);
 });
@@ -15,11 +16,9 @@ promise.then(function (orderID) {
 //{data:orderDetails}--it will be filed after the async time it takes
 
 // Another way to write promises(above code)
-createOrder(
-  cart.then(function (orderID) {
-    proceedToPayment(orderID);
-  })
-);
+createOrder().then(function (orderID) {
+  return proceedToPayment(orderID);
+});
 
 // Promise Chaining
 createOrder(cart)
@@ -68,6 +67,20 @@ const cart2 = ["shoes", "kurta", "jeans"];
 
 const promise1 = createOrder(cart);
 
+function createOrder(cart) {
+  const pr = new Promise(function (resolve, reject) {
+    if (!validateCart(cart)) {
+      const err = new Error("cart is not valid");
+      reject(err);
+    }
+    const orderId = "123";
+    if (orderId) {
+      resolve(orderId);
+    }
+  });
+  return pr;
+}
+
 promise1
   .then(function (orderId) {
     console.log(orderId);
@@ -76,19 +89,6 @@ promise1
     console.log(err.message);
   });
 
-function createOrder(cart) {
-  const pr = new Promise(function (resolve, reject) {
-    if (!validateCart(cart)) {
-      const err = new Error("cart is not valid");
-      reject(err);
-    }
-    const orderId = "123";
-    if (orderId) {
-      resolve(orderId);
-    }
-  });
-  return pr;
-}
 function validateCart(cart) {
   return true;
 }
@@ -97,14 +97,6 @@ function validateCart(cart) {
 
 const cart23 = ["shoes", "kurta", "jeans"];
 
-createOrder(cart)
-  .then(function (orderId) {
-    console.log(orderId);
-  })
-  .catch(function (err) {
-    console.log(err.message);
-  });
-
 function createOrder(cart) {
   const pr = new Promise(function (resolve, reject) {
     if (!validateCart(cart)) {
@@ -118,6 +110,14 @@ function createOrder(cart) {
   });
   return pr;
 }
+
+createOrder(cart)
+  .then(function (orderId) {
+    console.log(orderId);
+  })
+  .catch(function (err) {
+    console.log(err.message);
+  });
 function validateCart(cart) {
   return true;
 }
@@ -162,4 +162,3 @@ function proceedToPayment(orderId) {
 function validateCart(cart) {
   return true;
 }
-

@@ -32,24 +32,24 @@ x(function y() {
   console.log("function y");
 });
 
-// ****************************************************************************************
-// Eample of a callback function
-document.getElementById("clickMe").addEventListener("click", function xyz() {
-  console.log("clicked");
-});
-//when a button is clicked function xyz will go to callstack
+// // ****************************************************************************************
+// // Eample of a callback function
+// document.getElementById("clickMe").addEventListener("click", function xyz() {
+//   console.log("clicked");
+// });
+// //when a button is clicked function xyz will go to callstack
 
-// ****************************************************************************************
-let count = 0;
-document.getElementById("clickMe").addEventListener("click", function xyz() {
-  console.log("clicked", count++);
-});
+// // ****************************************************************************************
+// let count = 0;
+// document.getElementById("clickMe").addEventListener("click", function xyz() {
+//   console.log("clicked", count++);
+// });
 
-// ****************************************************************************************
-// Function attach event listner
-function attachEventListner() {
-  let count = 0;
-  document.getElementById("clickMe").addEventListener("click", function xyzq() {
-    console.log("clicked", count++);
-  });
-}
+// // ****************************************************************************************
+// // Function attach event listner
+// function attachEventListner() {
+//   let count = 0;
+//   document.getElementById("clickMe").addEventListener("click", function xyzq() {
+//     console.log("clicked", count++);
+//   });
+// }
