@@ -1,15 +1,10 @@
-console.log("start");
+async function errorHandling() {
+  try {
+    await Promise.reject('Error inside async function');
+    console.log('This line should not be reached');
+  } catch (error) {
+    console.error(error);
+  }
+}
 
-const fn = () => {
-  return new Promise((resolve, reject) => {
-    console.log(1);
-    resolve("success");
-  });
-};
-console.log("middle");
-
-fn().then((res) => {
-  console.log(res);
-});
-
-console.log("end");
+errorHandling();
