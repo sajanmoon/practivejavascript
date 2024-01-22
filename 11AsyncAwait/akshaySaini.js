@@ -31,7 +31,7 @@ const p1 = new Promise((resolve, reject) => {
   resolve("i am promise");
 });
 async function getData() {
-  const prms = await p; //to handle our promise we will use await (will replace it with ,then)
+  const prms = await p1; //to handle our promise we will use await (will replace it with ,then)
   //   await can only be used inside async function
   console.log(prms);
 }

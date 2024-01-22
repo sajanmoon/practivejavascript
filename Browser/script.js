@@ -1,10 +1,24 @@
-async function errorHandling() {
-  try {
-    await Promise.reject('Error inside async function');
-    console.log('This line should not be reached');
-  } catch (error) {
-    console.error(error);
-  }
+// myPromise = () => Promise.resolve("I have resolved");
+const myPromise = (resolve, reject) => {
+  return function () {
+    setTimeout(() => {
+      return Promise.resolve("done");
+    }, 1000);
+  };
+};
+function firstFunction() {
+  myPromise().then((res) => console.log(res));
+  console.log("second");
 }
 
-errorHandling();
+async function secondFunction() {
+  console.log(await myPromise());
+  console.log("second");
+}
+firstFunction();
+secondFunction();
+
+// second
+// done
+// done
+// second

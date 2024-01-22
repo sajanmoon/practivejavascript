@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* class selector  */
+      .red {
+        background: red;
+      }
+      /* ID selector  */
+      #green {
+        background: green;
+      }
+      /* decendent selector  */
+      .child {
+        background: yellow;
+      }
+      /* Universal Selectors */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* Pseudo selector  */
+      a:visited {
+        color: red;
+      }
+      a:link {
+        color: blue;
+      }
+      a:active {
+        background: red;
+      }
+      a:hover {
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="green">I m GREEN</div>
+    <div class="red">I m RED</div>
+    <div class="child">
+      <p>I m Child</p>
+    </div>
+    <a href="https://www.google.com/">GO TO GOOGLE</a>
+    <a href="https://www.facebook.com/">GO TO facebook</a>
+  </body>
+</html>
