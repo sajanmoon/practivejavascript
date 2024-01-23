@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      
-    </style>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-  </head>
-  <body>
-    <h1 class="qwerty">Hello HTML</h1>
-    <button>Click me</button>
-  </body>
-  <script src="script.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .container {
+      border: 2px solid black;
+      display: grid;
+      grid-template-areas:
+        "nav nav nav"
+        "side article article"
+        "footer footer footer";
+      grid-template-rows: auto;
+      grid-template-columns: auto;
+    }
+    .item {
+      border: 2px solid red;
+      height: 55px;
+    }
+    .item1 {
+      grid-area: nav;
+      background-color: aqua;
+    }
+    .item2 {
+      grid-area: side;
+      background-color: beige;
+    }
+    .item3 {
+      grid-area: article;
+      background-color: azure;
+    }
+    .item4 {
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+  </div>
+</body>
 </html>
